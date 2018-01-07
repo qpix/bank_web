@@ -1,0 +1,17 @@
+body {
+	font-family: monospace;
+}
+#container {
+	width: 500px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+#header {
+	text-align: center;
+	text-shadow: 2px 2px 5px black;
+	color: white;
+	font-size: 20px;
+	line-height: 100px;
+	background-image: url('money.jpg');
+	border-bottom: 1px solid black;
+}
