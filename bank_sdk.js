@@ -36,7 +36,7 @@ function req(
 	};
 	var URI = 'http://127.0.0.1:5000/' + action + obj_to_qs(parameters);
 	console.log('SENDING: ' + URI)
-	xhttp.open('GET', 'http://127.0.0.1:5000/' + action + obj_to_qs(parameters), true);
+	xhttp.open('GET', URI, true);
 
 	if (authorization_header)
 		xhttp.setRequestHeader('Authorization', 'Bearer ' + authorization_header);

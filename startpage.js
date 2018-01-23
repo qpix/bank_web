@@ -106,7 +106,7 @@ function display_account (acc) {
 	}
 
 	populate_all();
-	setInterval(populate_all, 1000);
+	setInterval(populate_all, 10000);
 
 	button.onclick = function() {
 		acc.account_make_transfer(
