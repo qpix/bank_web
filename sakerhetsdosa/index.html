@@ -5,7 +5,7 @@
 			<tr><td><input type="button" value="1" onclick="key_press(1)"></td><td><input type="button" value="2" onclick="key_press(2)"></td><td><input type="button" value="3" onclick="key_press(3)"></td></tr>
 			<tr><td><input type="button" value="4" onclick="key_press(4)"></td><td><input type="button" value="5" onclick="key_press(5)"></td><td><input type="button" value="6" onclick="key_press(6)"></td></tr>
 			<tr><td><input type="button" value="7" onclick="key_press(7)"></td><td><input type="button" value="8" onclick="key_press(8)"></td><td><input type="button" value="9" onclick="key_press(9)"></td></tr>
-			<tr><td></td><td><input type="button" value="<" onclick="key_press(-1)"></td><td><input type="button" value="X" onclick="key_press(0)"></td></tr>
+			<tr><td><input type="button" value="0" onclick="key_press(0)"></td><td><input type="button" value="<" onclick="key_press(-1)"></td><td><input type="button" value="X" onclick="key_press(-2)"></td></tr>
 		</table>
 		<script>
 
@@ -45,12 +45,12 @@ function submit() {
 }
 
 function key_press(button) {
-	if (0 < button)
+	if (0 <= button)
 		display_append(button);
-	else if (button == 0 && display.value.length == 6)
-		submit();
 	else if (button == -1)
 		display_remove();
+	else if (button == -2 && display.value.length == 6)
+		submit();
 }
 
 		</script>
