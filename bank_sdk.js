@@ -34,7 +34,7 @@ function req(
 				
 		}
 	};
-	var URI = 'http://127.0.0.1:5000/' + action + obj_to_qs(parameters);
+	var URI = 'http://' + window.location.hostname + ':5000/' + action + obj_to_qs(parameters);
 	console.log('SENDING: ' + URI)
 	xhttp.open('GET', URI, true);
 
