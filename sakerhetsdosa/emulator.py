@@ -19,4 +19,4 @@ def create_challenge(account, time = None):
     challenge = str(int(create_token(account, time), 16) % 1000000)
     return '0' * (6 - len(challenge)) + challenge
 
-print(create_challenge(sys.argv[1], sys.argv[2]))
+print(create_challenge(sys.argv[1], sys.argv[2]), end='')
