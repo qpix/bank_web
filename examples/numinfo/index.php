@@ -29,9 +29,9 @@ function factorize($n)
 $num = intval($_GET['integer']);
 
 if ($num % 2)
-	$resp->even = true;
-else
 	$resp->even = false;
+else
+	$resp->even = true;
 
 $resp->prime = is_prime($num);
 $resp->factors = factorize($num);
